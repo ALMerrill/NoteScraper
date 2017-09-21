@@ -32,6 +32,8 @@ def modify_file(file, name):
 	for line in lines:
 		if line == '':
 			pass
+		elif line.startswith('\t'):
+			note += '<p> &nbsp&nbsp&nbsp&nbsp' + line + '<p>'
 		else:
 			note += '<p>' + line + '<p>'
 	txt_file.close()
